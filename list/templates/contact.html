@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+  <style>
+       body{
+ background-color:lightgray;
+          }
+
+     .table{
+       border:1px solid black;
+          }
+          .name{
+            border:1px solid black;
+
+          }
+
+
+</style>
+<strong> CONTACT LIST</strong>
+<table  class="table">
+    <tr class="name">
+        <th>ID</th>
+        <th>AVATAR</th>
+        <th>FIRST_NAME</th>
+        <th>LAST_NAME</th>
+        <th>PHONE</th>
+        <th>EMAIL</th>
+        <th>COMPANY</th>
+        <th>JOB_TITLE</th>
+    </tr>
+{% for i in response%}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.avatar}}</td>
+        <td>{{i.first_name}}</td>
+        <td>{{i.last_name}}</td>
+        <td>{{i.phone}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.company}}</td>
+        <td>{{i.job_title}}</td>
+    </tr>
+{% endfor %}
+  </table>
+</body>
+</html>
